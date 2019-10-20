@@ -1,0 +1,32 @@
+{
+  "name": "direwolf-app",
+  "version": "0.0.0",
+  "description": "Direwolf Space Station",
+  "author": "direwolf-app",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/direwolf/direwolf-app.git"
+  },
+  "scripts": {
+    "start:build": "cd dist && es-dev-server --open",
+    "build": "rimraf dist && rollup -c rollup.config.js",
+    "start": "es-dev-server --app-index index.html --node-resolve --open --watch",
+    "start:compatibility": "es-dev-server --app-index index.html --compatibility all --node-resolve --open --watch"
+  },
+  "dependencies": {
+    "@material/mwc-icon-button": "^0.9.0",
+    "lit-element": "^2.0.1",
+    "lit-html": "^1.0.0",
+    "direwolf-elements": "~0.0.0",
+    "direwolf-modeler": "~0.0.0",
+    "direwolf-istar-elements": "~0.0.0",
+    "direwolf-ifml-elements": "~0.0.0"
+  },
+  "devDependencies": {
+    "@open-wc/building-rollup": "^0.9.0",
+    "rimraf": "^2.6.3",
+    "rollup": "^1.15.4",
+    "es-dev-server": "^1.5.0"
+  }
+}
