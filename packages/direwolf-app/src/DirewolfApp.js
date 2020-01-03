@@ -5,8 +5,8 @@ import { classMap } from 'lit-html/directives/class-map.js';
 import 'direwolf-elements/direwolf-space.js';
 import 'direwolf-modeler/direwolf-modeler.js';
 import { menu, reqbaz, istar2, model, formatShapes, web, moreVert, feedback } from './direwolf-icons.js';
-import '../../page-main/page-main.js';
-import '../../page-one/page-one.js';
+//import '../../page-main/page-main.js';
+//import '../../page-one/page-one.js';
 //import 'direwolf-ifml-elements/ifml-palette.js';
 import 'direwolf-istar-elements/istar-palette.js';
 
