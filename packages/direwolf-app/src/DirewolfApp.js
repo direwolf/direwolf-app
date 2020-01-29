@@ -155,7 +155,7 @@ export class DirewolfApp extends LitElement {
     if (e.currentTarget.getAttribute('id') === 'menu') {
       //this.$.drawer.toggle();
     } else if (e.currentTarget.getAttribute('id') === 'feedback') {
-      window.open('https://requirements-bazaar.org/projects/303/categories/439', '_blank');
+      window.open('https://requirements-bazaar.org/projects/303/categories/806', '_blank');
     } else {
       this.page = e.currentTarget.getAttribute('id');
     }
