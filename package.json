@@ -9,18 +9,19 @@
     "url": "git+https://github.com/direwolf/direwolf-app.git"
   },
   "scripts": {
-    "start:build": "cd dist && es-dev-server --open",
+    "start:build": "cd dist && es-dev-server --open --base-path '/spaces'",
     "build": "rimraf dist && rollup -c rollup.config.js",
     "start": "es-dev-server --app-index index.html --dedupe --open --watch",
     "start:compatibility": "es-dev-server --app-index index.html --compatibility all --node-resolve --open --watch"
   },
   "dependencies": {
     "@material/mwc-icon-button": "^0.12.0",
-    "direwolf-elements": "0.0.2",
+    "direwolf-elements": "0.0.3",
     "direwolf-ifml-elements": "0.0.0",
-    "direwolf-istar-elements": "0.0.0",
-    "direwolf-modeler": "0.0.2",
+    "direwolf-istar-elements": "0.0.1",
+    "direwolf-modeler": "0.0.3",
     "lit-element": "^2.2.1",
+    "lit-element-router": "^2.0.0-rc.16",
     "lit-html": "^1.1.2"
   },
   "devDependencies": {

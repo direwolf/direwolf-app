@@ -10,6 +10,7 @@ module.exports = {
   },
   dedupe: true,
   preserveSymlinks: true,
+  basePath: '/spaces',
   appIndex: 'index.html',
   moduleDirs: ['node_modules']
 }

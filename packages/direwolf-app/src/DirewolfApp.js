@@ -1,6 +1,9 @@
 import { LitElement, html, css } from 'lit-element';
-import {IconButton} from '@material/mwc-icon-button';
+import '@material/mwc-icon-button';
 import { classMap } from 'lit-html/directives/class-map.js';
+import { router } from "lit-element-router";
+
+import {} from "@webcomponents/webcomponentsjs/webcomponents-loader.js";
 
 import 'direwolf-elements/direwolf-space.js';
 import 'direwolf-modeler/direwolf-modeler.js';
@@ -9,14 +12,38 @@ import { menu, reqbaz, istar2, model, formatShapes, web, moreVert, feedback } fr
 //import '../../page-one/page-one.js';
 //import 'direwolf-ifml-elements/ifml-palette.js';
 import 'direwolf-istar-elements/istar-palette.js';
+import '../app-main';
+import '../space-selector';
 
-export class DirewolfApp extends LitElement {
+export class DirewolfApp extends router(LitElement) {
 
   static get properties() {
     return {
+      route: { type: String },
+      params: { type: Object },
+      query: { type: Object },
+      data: { type: Object },
       title: { type: String },
       page: { type: String },
     };
+  }
+
+  static get routes() {
+    return [
+      {
+        name: "select-space",
+        pattern: "/spaces",
+        data: { title: "Home" }
+      },
+      {
+        name: "space",
+        pattern: "/spaces/:space"
+      },
+      {
+        name: "not-found",
+        pattern: "*"
+      }
+    ];
   }
 
   static get styles() {
@@ -127,7 +154,19 @@ export class DirewolfApp extends LitElement {
 
   constructor() {
     super();
+    this.route = "";
+    this.params = {};
+    this.query = {};
+    this.data = {};
+
     this.page = 'istar';
+  }
+
+  router(route, params, query, data) {
+    this.route = route;
+    this.params = params;
+    this.query = query;
+    this.data = data;
   }
 
   _renderPage() {
@@ -167,39 +206,43 @@ export class DirewolfApp extends LitElement {
 
   render() {
     return html`
-      <direwolf-space name="spaces" space="myspace">
-        <div id="vertical-skeleton">
-          <div id="app-tabs">
-            <mwc-icon-button id="menu" @click=${this._handleMenuClick}>
-              ${menu}
-            </mwc-icon-button>
-            <mwc-icon-button id="reqbaz" @click=${this._handleMenuClick} title="Requirements Bazaar">
-              ${reqbaz}
-            </mwc-icon-button>
-            <mwc-icon-button id="istar" @click=${this._handleMenuClick} title="iStar 2.0 Modeler">
-              ${istar2}
-            </mwc-icon-button>
-            <mwc-icon-button id="ifml" @click=${this._handleMenuClick} title="Interaction Flow Designer">
-              ${model}
-            </mwc-icon-button>
-            <mwc-icon-button id="html" @click=${this._handleMenuClick} title="HTML Editor">
-              ${formatShapes}
-            </mwc-icon-button>
-            <mwc-icon-button id="preview" @click=${this._handleMenuClick} title="Preview">
-              ${web}
-            </mwc-icon-button>
-            <mwc-icon-button>
-              ${moreVert}
-            </mwc-icon-button>
-            <mwc-icon-button id="feedback" @click=${this._handleMenuClick} title="Give Feedback">
-              ${feedback}
-            </mwc-icon-button>
+      <app-main active-route=${this.route}>
+        <space-selector route="select-space"></space-selector>
+        <direwolf-space server="wss://direwolf.rocks/yjs" route="space" name="spaces" space=${this.params.space}>
+          <div id="vertical-skeleton">
+            <div id="app-tabs">
+              <mwc-icon-button id="menu" @click=${this._handleMenuClick}>
+                ${menu}
+              </mwc-icon-button>
+              <mwc-icon-button id="reqbaz" @click=${this._handleMenuClick} title="Requirements Bazaar">
+                ${reqbaz}
+              </mwc-icon-button>
+              <mwc-icon-button id="istar" @click=${this._handleMenuClick} title="iStar 2.0 Modeler">
+                ${istar2}
+              </mwc-icon-button>
+              <mwc-icon-button id="ifml" @click=${this._handleMenuClick} title="Interaction Flow Designer">
+                ${model}
+              </mwc-icon-button>
+              <mwc-icon-button id="html" @click=${this._handleMenuClick} title="HTML Editor">
+                ${formatShapes}
+              </mwc-icon-button>
+              <mwc-icon-button id="preview" @click=${this._handleMenuClick} title="Preview">
+                ${web}
+              </mwc-icon-button>
+              <mwc-icon-button>
+                ${moreVert}
+              </mwc-icon-button>
+              <mwc-icon-button id="feedback" @click=${this._handleMenuClick} title="Give Feedback">
+                ${feedback}
+              </mwc-icon-button>
+            </div>
+            <div id="app-content">
+              ${this._renderPage()}
+            </div>
           </div>
-          <div id="app-content">
-            ${this._renderPage()}
-          </div>
-        </div>
-      </direwolf-space>
+        </direwolf-space>
+        <h1 route="not-found">Not Found</h1>
+      </app-main>
     `;
   }
 
