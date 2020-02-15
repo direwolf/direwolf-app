@@ -19,7 +19,7 @@
     "direwolf-elements": "0.0.3",
     "direwolf-ifml-elements": "0.0.0",
     "direwolf-istar-elements": "0.0.1",
-    "direwolf-modeler": "0.0.3",
+    "direwolf-modeler": "0.0.4",
     "lit-element": "^2.2.1",
     "lit-element-router": "^2.0.0-rc.16",
     "lit-html": "^1.1.2"
