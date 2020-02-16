@@ -185,7 +185,7 @@ export class DirewolfApp extends router(LitElement) {
         `;
       default:
         return html`
-          <p>This page is not yet available.</p>
+          <p>This page is not available currently.</p>
         `;
     }
   }

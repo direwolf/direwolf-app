@@ -1,6 +1,6 @@
 {
   "name": "direwolf-app",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Direwolf Space Station",
   "author": "direwolf-app",
   "license": "MIT",
@@ -16,17 +16,18 @@
   },
   "dependencies": {
     "@material/mwc-icon-button": "^0.12.0",
-    "direwolf-elements": "0.0.3",
-    "direwolf-ifml-elements": "0.0.0",
-    "direwolf-istar-elements": "0.0.1",
-    "direwolf-modeler": "0.0.4",
+    "direwolf-elements": "0.0.4",
+    "direwolf-ifml-elements": "^0.0.2",
+    "direwolf-istar-elements": "^0.0.6",
+    "direwolf-modeler": "^0.0.6",
     "lit-element": "^2.2.1",
     "lit-element-router": "^2.0.0-rc.16",
     "lit-html": "^1.1.2"
   },
   "devDependencies": {
     "@open-wc/building-rollup": "^0.15.1",
-    "es-dev-server": "^1.36.4",
+    "es-dev-server": "^1.40.0",
+    "es-module-lexer": "^0.3.13",
     "rimraf": "^2.6.3",
     "rollup": "^1.30.1",
     "babel-plugin-transform-commonjs": "^1.1.6",
