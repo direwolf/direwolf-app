@@ -208,7 +208,7 @@ export class DirewolfApp extends router(LitElement) {
     return html`
       <app-main active-route=${this.route}>
         <space-selector route="select-space"></space-selector>
-        <direwolf-space server="wss://direwolf.rocks/yjs" route="space" name="spaces" space=${this.params.space}>
+        <direwolf-space server="ws://127.0.0.1:1234" route="space" name="spaces" space=${this.params.space}>
           <div id="vertical-skeleton">
             <div id="app-tabs">
               <mwc-icon-button id="menu" @click=${this._handleMenuClick}>
