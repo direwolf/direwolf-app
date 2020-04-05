@@ -15,6 +15,8 @@ import 'direwolf-istar-elements/istar-palette.js';
 import '../app-main';
 import '../space-selector';
 
+import 'reqbaz-components/reqbaz-requirements-grid.js';
+
 export class DirewolfApp extends router(LitElement) {
 
   static get properties() {
@@ -182,6 +184,13 @@ export class DirewolfApp extends router(LitElement) {
           <direwolf-modeler name="ifml" title="Interaction Flow Designer" syncprefix="ifml">
             <ifml-palette slot="palettes"></ifml-palette>
           </direwolf-modeler>
+        `;
+      case 'reqbaz':
+        return html`
+          <div style="margin: 20px;">This is an example of a requirements list from <a href="https://requirements-bazaar.org" target="_blank">Requirements Bazaar.</a></div>
+          <div style="overflow-y: scroll">
+            <reqbaz-requirements-grid category="2"></reqbaz-requirements-grid>
+          </div>
         `;
       default:
         return html`
