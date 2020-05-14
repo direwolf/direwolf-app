@@ -16,23 +16,23 @@
   },
   "dependencies": {
     "@material/mwc-icon-button": "^0.12.0",
-    "direwolf-elements": "0.0.4",
-    "direwolf-ifml-elements": "^0.0.2",
-    "direwolf-istar-elements": "^0.0.10",
-    "direwolf-modeler": "^0.0.13",
-    "lit-element": "^2.2.1",
-    "lit-element-router": "^2.0.0-rc.16",
-    "lit-html": "^1.1.2",
+    "direwolf-elements": "0.0.5",
+    "direwolf-ifml-elements": "^0.0.3",
+    "direwolf-istar-elements": "0.0.12",
+    "direwolf-modeler": "0.0.19",
+    "lit-element": "^2.3.1",
+    "lit-element-router": "^2.0.3",
+    "lit-html": "^1.2.1",
     "reqbaz-components": "^2.0.1"
   },
   "devDependencies": {
     "@open-wc/building-rollup": "^0.15.1",
-    "es-dev-server": "^1.40.0",
-    "es-module-lexer": "^0.3.13",
-    "rimraf": "^2.6.3",
-    "rollup": "^1.30.1",
     "babel-plugin-transform-commonjs": "^1.1.6",
     "es-dev-commonjs-transformer": "^0.1.1",
+    "es-dev-server": "^1.49.0",
+    "es-module-lexer": "^0.3.18",
+    "rimraf": "^2.6.3",
+    "rollup": "^1.32.1",
     "rollup-plugin-commonjs": "^10.1.0"
   }
 }
