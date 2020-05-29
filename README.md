@@ -1,5 +1,6 @@
 ## Direwolf Space Station
 
+[![DOI](https://zenodo.org/badge/215864343.svg)](https://zenodo.org/badge/latestdoi/215864343)
 [![Built with open-wc recommendations](https://img.shields.io/badge/built%20with-open--wc-blue.svg)](https://github.com/open-wc)
 
 ## Quickstart
