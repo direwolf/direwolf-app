@@ -1,0 +1,27 @@
+{
+    "description": "Direwolf Space Station", 
+    "license": "MIT", 
+    "title": "direwolf/direwolf-app: v0.0.6", 
+    "version": "v0.0.6", 
+    "upload_type": "software", 
+    "publication_date": "2020-05-29", 
+    "creators": [
+        {
+            "affiliation": "RWTH Aachen University", 
+            "name": "Istv\u00e1n Koren"
+        }
+    ], 
+    "access_right": "open", 
+    "related_identifiers": [
+        {
+            "scheme": "url", 
+            "identifier": "https://github.com/direwolf/direwolf-app/tree/v0.0.6", 
+            "relation": "isSupplementTo"
+        }, 
+        {
+            "scheme": "doi", 
+            "identifier": "10.5281/zenodo.3865444", 
+            "relation": "isVersionOf"
+        }
+    ]
+}
