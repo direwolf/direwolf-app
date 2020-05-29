@@ -1,6 +1,6 @@
 {
   "name": "direwolf-app",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Direwolf Space Station",
   "author": "direwolf-app",
   "license": "MIT",
@@ -18,7 +18,7 @@
     "@material/mwc-icon-button": "^0.12.0",
     "direwolf-elements": "0.0.5",
     "direwolf-ifml-elements": "^0.0.3",
-    "direwolf-istar-elements": "0.0.13",
+    "direwolf-istar-elements": "0.0.14",
     "direwolf-modeler": "0.0.19",
     "lit-element": "^2.3.1",
     "lit-element-router": "^2.0.3",
