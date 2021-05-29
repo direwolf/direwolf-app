@@ -1,4 +1,4 @@
-import { html } from 'lit-element';
+import { html } from 'lit';
 
 export const dashboard = html`<svg viewBox="0 0 24 24"><g><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"></path></g></svg>`;
 export const feedback = html`<svg viewBox="0 0 24 24"><g><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 12h-2v-2h2v2zm0-4h-2V6h2v4z"></path></g></svg>`;

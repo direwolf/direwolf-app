@@ -1,17 +1,17 @@
-import { LitElement, html, css } from 'lit-element';
+import { LitElement, html, css } from 'lit';
 import '@material/mwc-icon-button';
-import { classMap } from 'lit-html/directives/class-map.js';
+import { classMap } from 'lit/directives/class-map.js';
 import { router } from "lit-element-router";
 
-import {} from "@webcomponents/webcomponentsjs/webcomponents-loader.js";
+//import {} from "@webcomponents/webcomponentsjs/webcomponents-loader.js";
 
 import 'direwolf-elements/direwolf-space.js';
 import 'direwolf-modeler/direwolf-modeler.js';
 import { menu, reqbaz, istar2, model, formatShapes, web, moreVert, feedback } from './direwolf-icons.js';
 //import '../../page-main/page-main.js';
 //import '../../page-one/page-one.js';
-//import 'direwolf-ifml-elements/ifml-palette.js';
-import 'direwolf-istar-elements/istar-palette.js';
+import 'direwolf-ifml-elements/ifml-palette.js';
+//import 'direwolf-istar-elements/istar-palette.js';
 import '../app-main';
 import '../space-selector';
 
