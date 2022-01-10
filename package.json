@@ -1,6 +1,6 @@
 {
   "name": "direwolf-app",
-  "version": "0.0.7",
+  "version": "0.1.0",
   "description": "Direwolf Space Station",
   "author": "direwolf-app",
   "license": "MIT",
@@ -9,28 +9,36 @@
     "url": "git+https://github.com/direwolf/direwolf-app.git"
   },
   "scripts": {
-    "start:build": "cd dist && es-dev-server --open --base-path '/spaces'",
-    "build": "rimraf dist && rollup -c rollup.config.js",
-    "start": "web-dev-server --app-index index.html --dedupe --open --watch",
-    "start:compatibility": "es-dev-server --app-index index.html --compatibility all --node-resolve --open --watch"
+    "build": "rimraf dist && rollup -c rollup.config.js && npm run analyze -- --exclude dist",
+    "start:build": "web-dev-server --root-dir dist --app-index index.html --open",
+    "analyze": "cem analyze --litelement",
+    "start": "web-dev-server"
   },
   "dependencies": {
-    "@material/mwc-icon-button": "^0.21.0",
-    "direwolf-elements": "direwolf/direwolf-elements#develop",
-    "direwolf-ifml-elements": "direwolf/direwolf-ifml-elements#develop",
-    "direwolf-modeler": "direwolf/direwolf-modeler#develop",
-    "lit": "^2.0.0-rc.2",
+    "@material/mwc-icon-button": "^0.25.3",
+    "direwolf-elements": "direwolf/direwolf-elements",
+    "direwolf-ifml-elements": "direwolf/direwolf-ifml-elements",
+    "direwolf-istar-elements": "direwolf/direwolf-istar-elements",
+    "direwolf-modeler": "github:direwolf/direwolf-modeler",
+    "lit": "^2.0.2",
     "lit-element-router": "^2.0.3",
-    "reqbaz-components": "^2.0.1"
+    "reqbaz-components": "^2.1.0"
   },
   "devDependencies": {
-    "@open-wc/building-rollup": "^0.15.1",
-    "@web/dev-server": "^0.1.17",
-    "babel-plugin-transform-commonjs": "^1.1.6",
-    "es-dev-commonjs-transformer": "^0.1.1",
-    "es-module-lexer": "^0.3.24",
-    "rimraf": "^2.6.3",
-    "rollup": "^1.32.1",
-    "rollup-plugin-commonjs": "^10.1.0"
-  }
+    "@babel/preset-env": "^7.16.4",
+    "@custom-elements-manifest/analyzer": "^0.4.17",
+    "@open-wc/building-rollup": "^2.0.1",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-node-resolve": "^13.0.6",
+    "@web/dev-server": "^0.1.28",
+    "@web/rollup-plugin-html": "^1.10.1",
+    "@web/rollup-plugin-import-meta-assets": "^1.0.7",
+    "babel-plugin-template-html-minifier": "^4.1.0",
+    "deepmerge": "^4.2.2",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.60.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-workbox": "^6.2.0"
+  },
+  "customElements": "custom-elements.json"
 }

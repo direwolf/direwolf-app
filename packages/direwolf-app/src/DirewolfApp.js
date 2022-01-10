@@ -11,7 +11,7 @@ import { menu, reqbaz, istar2, model, formatShapes, web, moreVert, feedback } fr
 //import '../../page-main/page-main.js';
 //import '../../page-one/page-one.js';
 import 'direwolf-ifml-elements/ifml-palette.js';
-//import 'direwolf-istar-elements/istar-palette.js';
+import 'direwolf-istar-elements/istar-palette.js';
 import '../app-main';
 import '../space-selector';
 
